@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cordivleft: #025951;
+    --corlastleft: #025849;
+    --cordivright: #023346;
+    --corbutton: #0cf25db9;
+    --corh2: #038C3E;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #00090cee;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    min-height: 600px;
+    max-height: 774px;
+    max-width: 1737px;
+    width: 80%;
+    height: 93vh;
+    display: flex;
+    border-radius: 10px;
+    position: relative;
+    border: 3px ridge rgb(8, 182, 173);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.295);
+
+}
+
+
+
+.form-img {
+    width: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#aimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 60%;
+}
+
+.form-input {
+    background-color: var(--cordivright);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+.form-header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.form-header>h1 {
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.932);
+    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.form-header>h2 {
+    font-family: sans-serif;
+    color: var(--corh2);
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label {
+    font-family: monospace;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.884);
+    font-weight: 200;
+    font-size: 1.1em;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    background-color: var(--cordivright);
+    width: 370px;
+    color: rgba(255, 255, 255, 0.966);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.623);
+}
+
+input:focus-visible {
+    outline: 0px solid rgba(255, 255, 255, 0);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.8) brightness(50%) sepia(100%) saturate(100000%) hue-rotate(180deg);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #5a6264 inset;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+}
+
+#check {
+    all: unset;
+    background-color: #32425B;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    height: 20px;
+    width: 30px;
+    position: relative;
+    color: #32425B;
+}
+
+#check:checked {
+    background-image: url(img/checkmark-xxl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left left;
+}
+
+
+
+#terms>label {
+    width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    position: relative;
+    right: -10px;
+    padding: 3px;
+
+}
+
+#terms {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    flex-direction: row;
+    margin-bottom: 13px;
+    margin-top: 13px;
+
+}
+
+#sub {
+    background-color: var(--corbutton);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#sub:hover {
+    background-color: #038C3E;
+    cursor: pointer;
+}
+
+.box>a {
+    color: rgba(255, 255, 255, 0.623);
+    margin: auto;
+    margin-top: 13px;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1240px) {
+    .form-img {
+        display: none;
+    }
+
+    .main {
+        width: 60%;
+        min-height: 688px;
+
+    }
+
+    .form-input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 722px) {
+    .form-img {
+        display: none;
+    }
+
+    .main {
+        width: 90%;
+        min-height: 628px;
+        min-width: 437px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+
+    .form-input {
+        width: 100%;
+
+    }
+
+
+}
